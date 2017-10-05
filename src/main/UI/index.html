@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>Bird's Eye</title>
+	<link rel="stylesheet" href="libs/Photo-Sphere-Viewer/dist/photo-sphere-viewer.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="libs/pdfobject.min.js"></script>
+	<script src="libs/three.js"></script>
+	<script src="libs/CanvasRenderer.js"></script>
+	<script src="libs/Projector.js"></script>
+	<script src="libs/D.min.js"></script>
+	<script src="libs/uevent.min.js"></script>
+	<script src="libs/doT.min.js"></script>
+	<script src="libs/Photo-Sphere-Viewer/dist/photo-sphere-viewer.min.js"></script>
+	<script src="js/mainCtrl.js"></script>
+</head>
+<body>
+	<div ng-app="birdEye">
+		<div id='sphere' ng-controller="mainCtrl">
+			<div id="white-board-content" ng-click="showDoc()">
+	            <div class="doc">
+	                <a href="./assets/documents/TV/ITEM-CC-Leopard-LR.pdf" target="_blank"> Document 1</a>
+	            </div>
+	        </div>
+			<span class="toggle" ng-click="openNav()">&#9776;</span>
+
+			<div id="side-nav-menu" class="side-nav">
+				<ul>
+					<li>
+						<a href="javascript:void(0)" class="close-btn" ng-click="closeNav()">&times;</a>
+					</li>
+					<li id="home">
+						<a class="menu" href="#" ng-click="showSubAreas('floor-list')">Home</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
