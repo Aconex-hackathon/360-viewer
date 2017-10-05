@@ -20,24 +20,26 @@
 
             <div id="panorama">
 
-                <div id="mySidenav" class="leftsidenav">
-                  <a href="javascript:void(0)" class="closebtn" ng-click="closeNav()">&times;</a>
+                <div id="myLeftSidenav" class="leftsidenav">
+                    <a href="javascript:void(0)" class="closebtn" ng-click="closeLeftNav()">&times;</a>
+                    <div class="list-project"><a>{{floors[0].project.projectName}}</a></div>
+                    <div class="list-floor" ng-repeat="floor in floors" ng-click="floorDropDown()">
+                        <a>{{floor.floorName}}</a>
+                        <div class="list-room" ng-repeat="area in floorAreas" ng-if="showGroundRooms(floor)" ng-click="changeRoom(area.name)">
+                            <a>{{area.name}}</a>
+                        </div>
+                    </div>
+                </div>
+                <span class="toggle" ng-click="openLeftNav()">&#9776;</span>
+
+
+                <div id="myRightSidenav" class="rightsidenav">
+                  <a href="javascript:void(0)" class="closebtn" ng-click="closeRightNav()">&times;</a>
                   <a href="#">About</a>
                   <a href="#">Services</a>
                   <a href="#">Clients</a>
                   <a href="#">Contact</a>
                 </div>
-                <span class="toggle" ng-click="openNav()">&#9776;</span>
-
-
-                <div id="mySidenav" class="sidenav">
-                  <a href="javascript:void(0)" class="closebtn" ng-click="closeNav()">&times;</a>
-                  <a href="#">About</a>
-                  <a href="#">Services</a>
-                  <a href="#">Clients</a>
-                  <a href="#">Contact</a>
-                </div>
-                <span class="toggle" ng-click="openNav()">&#9776;</span>
 
             </div>
 

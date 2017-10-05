@@ -3,6 +3,19 @@
 	height: 825px;
 }
 
+.list-project {
+	border-bottom: 1px solid #777;
+}
+
+.list-room {
+	margin-left: 30px;
+    font-weight: lighter;
+}
+
+.list-room:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 .toggle {
     position: fixed;
     font-size: 30px;
@@ -22,8 +35,6 @@
 .pnlm-container * {
     box-sizing: content-box;
 }
-
-
 
 /* The side navigation menu */
 
@@ -54,7 +65,7 @@
 }
 
 /* The navigation menu links */
-.rightsidenav,
+.rightsidenav a,
 .leftsidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -65,13 +76,13 @@
 }
 
 /* When you mouse over the navigation links, change their color */
-.rightsidenav,
+.rightsidenav a:hover,
 .leftsidenav a:hover, .offcanvas a:focus{
     color: #f1f1f1;
 }
 
 /* Position and style the close button (top right corner) */
-.rightsidenav,
+.rightsidenav .closebtn,
 .leftsidenav .closebtn {
     position: absolute;
     top: 0;
