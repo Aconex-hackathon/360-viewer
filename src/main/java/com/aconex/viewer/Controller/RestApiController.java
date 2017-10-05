@@ -42,9 +42,19 @@ public class RestApiController {
         return projectRepository.findAll();
     }
 
+    @RequestMapping(value = "/projects/{projectId}", method = RequestMethod.GET)
+    public Project getProjectById(@PathVariable int projectId){
+        return projectRepository.findByProjectId(projectId);
+    }
+
     @RequestMapping(value = "/floors", method = RequestMethod.GET)
     public List<Floor> getAllFloors(){
         return floorRepository.findAll();
+    }
+
+    @RequestMapping(value = "/floors/{floorId}", method = RequestMethod.GET)
+    public Floor getFloorById(@PathVariable int floorId){
+        return floorRepository.findByFloorId(floorId);
     }
 
     @RequestMapping(value = "/areas", method = RequestMethod.GET)
@@ -52,9 +62,19 @@ public class RestApiController {
         return areaRepository.findAll();
     }
 
+    @RequestMapping(value = "/areas/{areaId}", method = RequestMethod.GET)
+    public Area getAreaById(@PathVariable int areaId){
+        return areaRepository.findByAreaId(areaId);
+    }
+
     @RequestMapping(value = "/assets", method = RequestMethod.GET)
     public List<Asset> getAllAssets(){
         return assetRepository.findAll();
+    }
+
+    @RequestMapping(value = "/assets/{assetId}", method = RequestMethod.GET)
+    public Asset getAssetById(@PathVariable int assetId){
+        return assetRepository.findById(assetId);
     }
 
     @RequestMapping(value = "/documents", method = RequestMethod.GET)
@@ -62,10 +82,10 @@ public class RestApiController {
         return documentRepository.findAll();
     }
 
-    /*@RequestMapping(value = "/documents/{assetId}", method = RequestMethod.GET)
+    @RequestMapping(value = "/documents/{assetId}", method = RequestMethod.GET)
     public List<Document> getDocumentsByAsset(@PathVariable int assetId){
-        return documentRepository.
-    }*/
+        return documentRepository.findByAssetId(assetId);
+    }
 
 
 }
