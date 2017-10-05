@@ -37,7 +37,7 @@ INSERT INTO DOCUMENT VALUES (13,'Admin',CURRENT_TIMESTAMP ,'Speaker - User Manua
 INSERT INTO DOCUMENT VALUES (14,'Admin',CURRENT_TIMESTAMP ,'Speaker - Warranty.pdf','Warranty',8);
 INSERT INTO DOCUMENT VALUES (15,'Admin',CURRENT_TIMESTAMP ,'TV - Certificate.pdf','Certificate',7);
 INSERT INTO DOCUMENT VALUES (16,'Admin',CURRENT_TIMESTAMP ,'TV - User manual.pdf','UserManual',7);
-INSERT INTO DOCUMENT VALUES (16,'Admin',CURRENT_TIMESTAMP ,'TV - Warranty.pdf','Warranty',7);
-INSERT INTO DOCUMENT VALUES (16,'Admin',CURRENT_TIMESTAMP ,'TV- Specification.pdf','Specification',7);
+INSERT INTO DOCUMENT VALUES (17,'Admin',CURRENT_TIMESTAMP ,'TV - Warranty.pdf','Warranty',7);
+INSERT INTO DOCUMENT VALUES (18,'Admin',CURRENT_TIMESTAMP ,'TV- Specification.pdf','Specification',7);
 
 

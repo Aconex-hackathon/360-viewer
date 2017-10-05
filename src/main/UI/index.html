@@ -1,43 +1,47 @@
+<!DOCTYPE HTML>
 <html>
 <head>
-	<title>Bird's Eye</title>
-	<link rel="stylesheet" href="libs/Photo-Sphere-Viewer/dist/photo-sphere-viewer.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour</title>
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-	<script src="libs/pdfobject.min.js"></script>
-	<script src="libs/three.js"></script>
-	<script src="libs/CanvasRenderer.js"></script>
-	<script src="libs/Projector.js"></script>
-	<script src="libs/D.min.js"></script>
-	<script src="libs/uevent.min.js"></script>
-	<script src="libs/doT.min.js"></script>
-	<script src="libs/Photo-Sphere-Viewer/dist/photo-sphere-viewer.min.js"></script>
-	<script src="js/mainCtrl.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.pannellum.org/2.3/pannellum.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdn.pannellum.org/2.3/pannellum.js"></script>
+    <script type="text/javascript" src="mainCtrl.js"></script>
+    <link rel="stylesheet" href="panorama.css"/>
 </head>
 <body>
-	<div ng-app="birdEye">
-		<div id='sphere' ng-controller="mainCtrl">
-			<div id="white-board-content" ng-click="showDoc()">
-	            <div class="doc">
-	                <a href="./assets/documents/TV/ITEM-CC-Leopard-LR.pdf" target="_blank"> Document 1</a>
-	            </div>
-	        </div>
-			<span class="toggle" ng-click="openNav()">&#9776;</span>
+    <div ng-app="smartManual">
+        <div ng-controller="mainCtrl">
 
-			<div id="side-nav-menu" class="side-nav">
-				<ul>
-					<li>
-						<a href="javascript:void(0)" class="close-btn" ng-click="closeNav()">&times;</a>
-					</li>
-					<li id="home">
-						<a class="menu" href="#" ng-click="showSubAreas('floor-list')">Home</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
+            <div id="panorama">
+
+                <div id="mySidenav" class="leftsidenav">
+                  <a href="javascript:void(0)" class="closebtn" ng-click="closeNav()">&times;</a>
+                  <a href="#">About</a>
+                  <a href="#">Services</a>
+                  <a href="#">Clients</a>
+                  <a href="#">Contact</a>
+                </div>
+                <span class="toggle" ng-click="openNav()">&#9776;</span>
+
+
+                <div id="mySidenav" class="sidenav">
+                  <a href="javascript:void(0)" class="closebtn" ng-click="closeNav()">&times;</a>
+                  <a href="#">About</a>
+                  <a href="#">Services</a>
+                  <a href="#">Clients</a>
+                  <a href="#">Contact</a>
+                </div>
+                <span class="toggle" ng-click="openNav()">&#9776;</span>
+
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>
-
